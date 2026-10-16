@@ -7,7 +7,12 @@
 [![Docker reproducible](https://img.shields.io/badge/docker-reproducible-2496ED)](docker-compose.yml)
 [![Pages ready](https://img.shields.io/badge/GitHub_Pages-ready-black)](preview.html)
 
-> 🚀 **Live Demo (interactive website):** open `preview.html` locally, or publish it via **Settings → Pages → Deploy from a branch** (see § Pages). It contains the dashboard, timeline, charts and a 10-question quiz.
+> 🚀 **Live Demo (click to open in browser):**
+> - Home: https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026/
+> - Preview: https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026/preview.html
+> - Docs copy: https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026/docs/preview.html
+>
+> All three render the same interactive page (dashboard + timeline + charts + 10-question quiz). If one returns 404, check Settings → Pages source below — with source `/` (root) all three return 200. Local fallback: open `preview.html` in any browser.
 
 ## Abstract — the 30-second CEO version
 
@@ -245,17 +250,45 @@ Extend: append to `claims_matrix.csv` + `timeline.csv` and re-run.
 
 ## 🌐 GitHub Pages — display as a website
 
-1. Push this repo (keep `preview.html` at root; copy already at `docs/index.html`).
-2. **Settings → Pages → Build and deployment → Source: Deploy from a branch** → Branch `main` → folder `/ (root)` → Save. (For root URL `/`, choose `/docs` instead — both files are identical.)
-3. Open `https://<user>.github.io/<repo>/preview.html` (or `/` if `/docs` selected).
-4. `.nojekyll` (already at root) tells Pages to serve custom HTML/CSS/JS as-is.
-5. Put the Pages URL at the top of this README as 🚀 Live Demo.
+**Click any link — all three serve the same page when Pages source is `/` (root):**
+
+| Path | URL | Expected |
+|------|-----|----------|
+| `/` | https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026/ | 200 (redirect → preview) |
+| `/preview.html` | https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026/preview.html | 200 |
+| `/docs/preview.html` | https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026/docs/preview.html | 200 |
+
+Diagnose in 10 seconds (no login):
+
+```bash
+BASE="https://M0-AR.github.io/huawei-nsa-blowback-zero-to-hero-verify-2026"
+for p in "" "preview.html" "docs/preview.html"; do
+  printf "%s -> " "/$p"
+  curl -s -o /dev/null -w "%{http_code}\n" "$BASE/$p"
+done
+```
+
+| `/` | `/preview.html` | `/docs/preview.html` | Meaning |
+|---|---|---|---|
+| 200 | 200 | 200 | source = `/` (root) ✅ — recommended here |
+| 200 | 200 | 404 | source = `/docs` — `/` and `/preview.html` work, docs-copy path not served |
+| 404 | 404 | 404 | Pages off / still building / wrong branch |
+
+Rules applied in this repo:
+
+1. Entry file `index.html` sits at the top of **both** sources (`index.html` + `docs/index.html`).
+2. Canonical page mirrored: `preview.html` (root, `assets/…`) + `docs/preview.html` (same, `assets/…` with local `docs/assets/` copy) — diff shows only location, not content.
+3. `.nojekyll` in **both** root and `docs/` so Pages serves custom HTML as-is.
+4. All asset paths relative (`assets/demo.gif`, never `/assets/…` or `/home/…`) so project Pages under `/<repo>/` resolves.
+5. Recommended setting: **Settings → Pages → Build and deployment → Source: Deploy from a branch → Branch `main` → folder `/` (root)** → Save, wait 1–2 min for the Actions “pages build and deployment” run, then re-probe.
 
 ```bash
 cp preview.html docs/index.html
-touch .nojekyll
-git add preview.html docs/index.html .nojekyll assets/demo.gif assets/preview-hero.png
-git commit -m "docs: interactive preview + demo assets"
+cp preview.html docs/preview.html
+cp assets/demo.gif assets/preview-hero.png assets/preview-full.png docs/assets/
+touch .nojekyll docs/.nojekyll
+git add preview.html index.html docs/index.html docs/preview.html .nojekyll docs/.nojekyll assets/demo.gif assets/preview-hero.png
+git commit -m "docs: pages mirrors + demo assets"
 git push origin main
 ```
 

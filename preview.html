@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Allegation to Blowback — Interactive Research Preview</title>
+<style>
+:root{--bg:#0b1220;--card:#111c33;--line:#1f2f52;--txt:#e8eefc;--mut:#9fb0d0;--acc:#5aa2ff;--grn:#3ddc84;--amber:#ffb454;--red:#ff6b6b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;background:radial-gradient(1200px 600px at 20% -10%,#1a2c55 0%,var(--bg) 55%);color:var(--txt)}
+.wrap{max-width:1080px;margin:0 auto;padding:24px}
+.hero{border:1px solid var(--line);border-radius:20px;padding:28px;background:linear-gradient(180deg,rgba(90,162,255,.12),rgba(0,0,0,0));margin-top:18px}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}.badge{font-size:12px;padding:4px 10px;border-radius:999px;border:1px solid var(--line);background:#0e1830;color:var(--mut)}.badge b{color:var(--txt)}
+h1{font-size:34px;margin:8px 0}h2{margin-top:34px;border-bottom:1px solid var(--line);padding-bottom:8px}p{color:var(--mut);line-height:1.7}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin:16px 0}
+.card{border:1px solid var(--line);border-radius:16px;padding:16px;background:var(--card)}.card h3{margin:0 0 6px;font-size:15px}.big{font-size:30px;font-weight:800}
+.kpi small{color:var(--mut)}canvas{width:100%;height:260px;background:#0a1326;border:1px solid var(--line);border-radius:14px}
+table{width:100%;border-collapse:collapse;font-size:14px}th,td{border-bottom:1px solid var(--line);padding:10px;text-align:left}th{color:var(--txt)}td{color:var(--mut)}
+.timeline{border-left:3px solid var(--acc);margin:12px 0 0 8px;padding-left:16px}.t{margin:12px 0}.t b{color:var(--txt)}.t span{color:var(--mut);font-size:13px}
+.quiz{border:1px solid var(--line);border-radius:16px;padding:18px;background:#0d1730}.q{font-size:17px;color:var(--txt);margin:8px 0}.opt{display:block;width:100%;text-align:left;margin:8px 0;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#0a1428;color:var(--txt);cursor:pointer}.opt:hover{border-color:var(--acc)}.opt.ok{border-color:var(--grn);background:rgba(61,220,132,.12)}.opt.bad{border-color:var(--red);background:rgba(255,107,107,.12)}
+.bar{height:10px;background:#0a1428;border-radius:999px;overflow:hidden;border:1px solid var(--line)}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc),var(--grn))}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;border:1px solid var(--line);background:var(--acc);color:#06101f;font-weight:700;cursor:pointer;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--txt)}.steps li{margin:10px 0;color:var(--mut)}.steps b{color:var(--txt)}
+code{background:#0a1428;border:1px solid var(--line);padding:2px 6px;border-radius:6px;color:var(--txt)}pre{background:#0a1428;border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;color:#cfe0ff}
+.nav{position:sticky;top:0;background:rgba(11,18,32,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:5}.nav .wrap{display:flex;gap:14px;align-items:center;padding:10px 24px}.nav a{color:var(--mut);text-decoration:none;font-size:13px}.nav a:hover{color:var(--txt)}
+footer{margin:30px 0;color:var(--mut);font-size:13px}
+</style>
+</head>
+<body>
+<div class="nav"><div class="wrap">
+<a href="#top"><b style="color:#fff">◈ Blowback Verify</b></a>
+<a href="#abstract">Abstract</a><a href="#demo">Demo</a><a href="#timeline">Timeline</a>
+<a href="#benchmarks">Benchmarks</a><a href="#quiz">Quiz</a><a href="#beginner">Beginner</a><a href="#pages">Pages</a>
+</div></div>
+<div class="wrap" id="top">
+<div class="hero">
+<div class="badges">
+<span class="badge"><b>MIT</b> license</span>
+<span class="badge"><b>12/12</b> claims confirmed</span>
+<span class="badge"><b>4.67/5</b> evidence</span>
+<span class="badge"><b>$16B</b> blowback mid</span>
+<span class="badge"><b>Docker</b> reproducible</span>
+<span class="badge"><b>GitHub Pages</b> ready</span>
+</div>
+<h1>From Allegation to Blowback</h1>
+<p><b style="color:#fff">A reproducible investigation of the Huawei–NSA backdoor dispute (2007–2026).</b>
+We test 12 claims end-to-end — intercepted routers, a years-long server intrusion, shelf-ready implants, a decade-long independent audit, and a leaked stockpile that caused global damage — against public documents and live market data.</p>
+<p><b style="color:#fff">Bottom line in 30 seconds:</b> after years of privileged access plus a decade of source-level audit, <b style="color:#fff">zero public documents prove an intentional backdoor</b> in the accused vendor — while the accuser's own stockpiled tools leaked and caused <b style="color:#fff">over $10 billion</b> in damage in weeks. A secret door you open today gets stolen tomorrow.</p>
+<p>
+<a class="btn" href="#quiz">▶ Take the 3-minute quiz</a>
+<a class="btn ghost" href="#beginner">🌱 Start from zero</a>
+<a class="btn ghost" href="https://github.com/">★ Star on GitHub</a>
+</p>
+<p style="font-size:13px">Live demo GIF: <code>assets/demo.gif</code> · Screenshots: <code>assets/preview-*.png</code> · One command: <code>docker compose up --build</code></p>
+</div>
+
+<h2 id="demo">🎬 Demo — what you will see</h2>
+<div class="grid">
+<div class="card"><h3>1. Run one command</h3><p><code>docker compose up --build</code> fetches SEC, Yahoo and NVD live (with offline snapshots), scores 12 claims, and writes 5 benchmark files.</p></div>
+<div class="card"><h3>2. Read the verdicts</h3><p><code>verification_report.json</code> = 12/12 confirmed. <code>blowback_benchmark.json</code> = ~$16B realized vs 0 proven. <code>cve_benchmark.json</code> = Huawei 1062 vs Cisco 6985 live.</p></div>
+<div class="card"><h3>3. Learn interactively</h3><p>Use the quiz below. Wrong answers explain why — you finish knowing more than most interview candidates about supply-chain security.</p></div>
+</div>
+<p><img src="assets/demo.gif" alt="Animated demo of blowback costs rising" style="width:100%;border:1px solid var(--line);border-radius:14px"></p>
+<p style="font-size:13px">If the GIF does not load, open <code>preview.html</code> locally or via GitHub Pages (see <a href="#pages">Pages section</a>).</p>
+
+<h2 id="timeline">🕰 Timeline — let's work this out step by step</h2>
+<div class="timeline">
+<div class="t"><b>2007 — Operation begins.</b> <span>An intelligence operation targets the vendor's headquarters network to look for links and to learn how its gear works.</span></div>
+<div class="t"><b>2008 — Implants on the shelf.</b> <span>Catalog entries describe persistent boot-level implants for routers and firewalls: they survive reboot and upgrade. Status: ready for deployment.</span></div>
+<div class="t"><b>2010 — Interdiction photos + independent lab opens.</b> <span>Newsletter photos show boxed routers opened and beacon firmware installed, then resealed. The same year the UK opens a source-level audit lab (Banbury).</span></div>
+<div class="t"><b>2014 — Dual narrative exposed.</b> <span>March: server intrusion disclosed. May: interception photos published; a major vendor CEO warns of a trust collapse; emerging-market orders drop sharply.</span></div>
+<div class="t"><b>2016–2017 — The stockpile leaks.</b> <span>Aug 2016: hackers claim stolen tools. Apr 14 2017: Windows exploit published free. May 12 2017: global worm (200,000+ hosts, 150 countries). Jun 2017: second wave, $10B+ total.</span></div>
+<div class="t"><b>2019 — Audit verdict.</b> <span>UK oversight: no backdoor found, but systemic poor hygiene — unsafe memory use, suppressed warnings, builds that cannot be reproduced from audited source.</span></div>
+<div class="t"><b>2020 — Ban.</b> <span>UK removes the vendor from 5G by 2027 (£2B) citing chip-sanction reliability, not a new technical find.</span></div>
+</div>
+
+<h2 id="benchmarks">📊 Benchmarks — rich data, plain words</h2>
+<div class="grid">
+<div class="card kpi"><h3>Claims confirmed</h3><div class="big">12 / 12</div><small>mean strength 4.67 / 5 · falsified 0</small></div>
+<div class="card kpi"><h3>Blowback cost (mid)</h3><div class="big">$16.0B</div><small>WannaCry $4–8B + NotPetya $10B+ · 28 days leak→worm</small></div>
+<div class="card kpi"><h3>Live CVE totals (NVD)</h3><div class="big">1062 / 6985</div><small>Huawei vs Cisco — hygiene risk is universal</small></div>
+<div class="card kpi"><h3>Trust shock 2014</h3><div class="big">−27%</div><small>Brazil orders; Emerging −7%, Russia −28%</small></div>
+</div>
+<h3>Realized damage by victim (USD millions, log view)</h3>
+<canvas id="c1" width="900" height="260"></canvas>
+<h3>Alleged (0 proven docs) vs realized (~$16B) — the core finding</h3>
+<canvas id="c2" width="900" height="260"></canvas>
+<p>How to read: both charts are from <code>benchmarks/*.json</code>. Re-run <code>python -m src.run_all</code> to regenerate live. CVE counts drift — that is expected and flagged <code>live:true/false</code>.</p>
+
+<h2>✨ Features — what this repo gives you</h2>
+<table><tr><th>Feature</th><th>What it does</th><th>Who it helps</th></tr>
+<tr><td>Claims matrix (12)</td><td>Each claim with verdict 0–5 and primary sources</td><td>Students, journalists, analysts</td></tr>
+<tr><td>Timeline (21 events)</td><td>2003–2026 chain from lawsuit to 2026 benchmarks</td><td>Teachers, interview prep</td></tr>
+<tr><td>Live-data checks</td><td>SEC + Yahoo + NVD with snapshot fallback</td><td>Researchers who need reproduction</td></tr>
+<tr><td>4 benchmarks</td><td>Verification, blowback $, market, hygiene</td><td>Decision makers, engineers</td></tr>
+<tr><td>Docker one-command</td><td><code>docker compose up --build</code> reproduces all</td><td>Anyone, no setup pain</td></tr>
+<tr><td>Interactive quiz</td><td>10 questions Easy→Pro with explanations</td><td>Beginners to professionals</td></tr>
+<tr><td>PhD proposal</td><td>5 testable patterns (H1–H5) with null hypotheses</td><td>Grad students, advisors</td></tr>
+</table>
+
+<h2>👥 User stories — what you can use it for</h2>
+<div class="grid">
+<div class="card"><h3>🎓 Student (zero → hero)</h3><p>Read Beginner → take Quiz → open Timeline. In 20 minutes you can explain routers, implants, audits and blowback without jargon.</p></div>
+<div class="card"><h3>💼 Interview candidate</h3><p>Memorize 4 numbers: 12/12, $16B, 28 days, 1062/6985. You will know more than most candidates about supply-chain risk.</p></div>
+<div class="card"><h3>🛡 Security engineer</h3><p>Reuse the hygiene checklist (memcpy, sign/unsigned, warnings, reproducible builds) in your own firmware reviews.</p></div>
+<div class="card"><h3>📈 Analyst / manager</h3><p>Quote B1–B3 in risk memos: secrecy has a $B-scale contingent liability; share follows financing, not headlines.</p></div>
+<div class="card"><h3>🎓 PhD starter</h3><p>Pick H1–H5 in <code>papers/PHD_PROPOSAL.md</code> — each has data, method and a falsifiable null.</p></div>
+<div class="card"><h3>🌍 Curious reader</h3><p>Just enjoy the story: a secret door built for spying got stolen and hit hospitals and shippers worldwide.</p></div>
+</div>
+
+<h2 id="quiz">🧠 Interactive quiz — from scratch to pro</h2>
+<div class="quiz">
+<div class="bar"><i id="pbar"></i></div>
+<p id="ptext" style="font-size:13px">Question 1 / 10 · Level: 🌱 Beginner</p>
+<div class="q" id="qtext"></div>
+<div id="opts"></div>
+<p id="exp" style="font-size:14px"></p>
+<p><button class="btn" id="next" style="display:none">Next →</button>
+<span id="score" style="font-size:13px"></span></p>
+</div>
+
+<h2 id="beginner">🌱 Beginner guide — read this and you are a professional</h2>
+<p><b style="color:#fff">Let's work this out in a step-by-step way to be sure we have the right answer.</b></p>
+<ol class="steps">
+<li><b>What is a router?</b> A box that reads every message, splits it into tiny packets, decides where each goes, and forwards it. Your home box does this for one family; national boxes do it for ministries, banks and mobile networks.</li>
+<li><b>Why does the maker matter?</b> The maker writes the code, fixes bugs remotely and ships updates. You hand them the keys to the road every message travels on. The only fix is trust plus verification.</li>
+<li><b>What is a backdoor?</b> A hidden flaw only the maker (or whoever steals the key) knows. To you the box looks fine; to the key-holder every message is readable at any time.</li>
+<li><b>Why can't we just open and check?</b> Millions of lines of code per device, millions of devices per country — and tomorrow's update can undo today's clean check. Auditing once does not mean safe forever.</li>
+<li><b>What is interdiction?</b> Stopping a shipment on the way to the buyer, opening the box, installing hidden software, resealing it so nobody notices, and letting it continue to the buyer.</li>
+<li><b>What is a persistent implant?</b> Software hidden where the box starts (boot memory) so it survives power cuts, reboots and even upgrades — like ink soaked into paper, not pencil on top.</li>
+<li><b>What did the independent audit find?</b> A UK lab with full source code for ~10 years found <b style="color:#fff">no intentional backdoor</b> — but messy code anyone skilled could exploit: unsafe memory copies, number errors, ignored warnings, builds that do not match audited source.</li>
+<li><b>What is blowback?</b> A secret tool built for spying gets stolen and reused by everyone — including criminals. One leaked Windows tool became two global worms in weeks, costing billions and closing hospitals.</li>
+<li><b>What should you remember?</b> Four numbers: <b style="color:#fff">12/12 claims confirmed · $16B blowback · 28 days leak-to-worm · 1062/6985 CVEs</b>. Say those with one example each and you sound professional.</li>
+<li><b>What next?</b> Run <code>docker compose up --build</code>, open <code>benchmarks/RESULTS.json</code>, then try the Pro quiz level below.</li>
+</ol>
+
+<h2>🚀 Getting started (copy-paste)</h2>
+<pre>git clone &lt;your-fork-url&gt;
+cd huawei-nsa-blowback-zero-to-hero-verify-2026
+docker compose up --build
+# without docker:
+pip install -r requirements.txt
+python -m src.run_all
+python -m pytest -q</pre>
+<p>Outputs: <code>benchmarks/verification_report.json</code>, <code>blowback_benchmark.json</code>, <code>market_benchmark.json</code>, <code>cve_benchmark.json</code>, <code>RESULTS.json</code>.</p>
+
+<h2>❓ FAQ</h2>
+<p><b style="color:#fff">Does this claim a specific device shipped with a backdoor?</b><br>No. It scores capability/readiness separately from deployment, and reports zero public proof of an intentional vendor backdoor after maximal access.</p>
+<p><b style="color:#fff">Why do CVE counts matter if they are not backdoors?</b><br>They measure attack surface. Poor hygiene is exploitable by anyone — which is why audit ≠ immunity and build integrity matters.</p>
+<p><b style="color:#fff">What if I am offline?</b><br>Committed snapshots let everything reproduce; live calls are flagged <code>live:true/false</code>.</p>
+
+<h2 id="pages">🌐 GitHub Pages — display this repo as a website</h2>
+<ol class="steps">
+<li><b>Push</b> this repo to GitHub (keep <code>preview.html</code> at root).</li>
+<li>Go to <b>Settings → Pages</b> → <b>Deploy from a branch</b> → Branch <b>main</b> → folder <b>/ (root)</b> → Save. (2026 UI: <i>Settings › Pages › Build and deployment › Source: Deploy from a branch</i>.)</li>
+<li>Your site appears at <code>https://&lt;user&gt;.github.io/&lt;repo&gt;/preview.html</code>. To serve at <code>/</code>, also copy this file to <code>docs/index.html</code> and choose folder <code>/docs</code> — both work.</li>
+<li>Add <code>.nojekyll</code> (empty file at root, already included) so GitHub serves custom HTML/CSS/JS as-is without Jekyll processing.</li>
+<li>Share the Pages link at the top of the README as <b>🚀 Live Demo</b>. Visitors read the interactive page; developers clone the repo.</li>
+</ol>
+<pre>cp preview.html docs/index.html
+touch .nojekyll
+git add preview.html docs/index.html .nojekyll
+git commit -m "docs: pages site + interactive preview"
+git push origin main</pre>
+
+<h2>📝 License + contact</h2>
+<p>MIT — reuse with citation (<code>CITATION.cff</code>). Data: public documents + live SEC/NVD/Yahoo. This page is a summary; the repo is the evidence.</p>
+<footer>Built for learning: zero → hero, step by step. The secret door you open today will be stolen — price it before you build it.</footer>
+</div>
+<script>
+var Q=[
+{q:"What does a router do with your message?",o:["It flies it through the air untouched","It splits it into packets, reads them, decides where they go, forwards them","It deletes it after one day"],a:1,e:"Packets enter the router, get read and routed — whoever controls the router sees the flow. Scale that to a country and you see why makers matter.",l:"🌱 Beginner"},
+{q:"What is a backdoor?",o:["A broken power button","A hidden flaw only the key-holder knows, invisible to the user","A faster Wi-Fi antenna"],a:1,e:"The box looks fine to you; the key-holder can read everything any time. That is the whole fear in one sentence.",l:"🌱 Beginner"},
+{q:"What is supply-chain interdiction?",o:["Stopping a shipment, implanting hidden software, resealing it, delivering it","Banning a vendor on TV","Updating your phone"],a:0,e:"Intercept → secret location → beacon install → repackage → deliver. The 2010 photos show exactly this with boxed routers.",l:"🌱 Beginner"},
+{q:"What does 'persistent boot implant' mean?",o:["It disappears after reboot","It lives where the device starts, so it survives reboot and upgrade","It only works with Wi-Fi off"],a:1,e:"Boot memory runs first on power-up. Ink, not pencil — that is why 'factory reset' does not guarantee removal.",l:"🌱 Beginner"},
+{q:"What did the UK decade-long source audit (Banbury) find?",o:["Proof of an intentional backdoor","No backdoor found — but systemic poor hygiene anyone could exploit","Nothing at all"],a:1,e:"No malice proven; plenty of exploitable mess: unsafe copies, number errors, suppressed warnings, non-reproducible builds.",l:"🚀 Intermediate"},
+{q:"Why doesn't 'audited clean today' mean 'safe tomorrow'?",o:["Because auditors are slow","Because an update can re-infect and the binary may not match audited source","Because routers hate audits"],a:1,e:"Binary-equivalence failed: the running binary could not be proven to match the audited source. Tomorrow's update resets the game.",l:"🚀 Intermediate"},
+{q:"How fast did a free leaked exploit become a global worm?",o:["28 days (Apr 14 → May 12, 2017)","3 years","Never"],a:0,e:"Free dump Apr 14 → WannaCry May 12: 200,000+ hosts, 150 countries. Speed is the blowback lesson.",l:"🚀 Intermediate"},
+{q:"What was the White House-scale cost of the second wave (NotPetya)?",o:["$10,000","Over $10 billion (Maersk $200–300M, Merck $870M, FedEx-TNT $400M)","$0 — it was harmless"],a:1,e:"One SMB bug, two worms, nine-figure losses per company. Secrecy gains are private; leak losses are social and exponential.",l:"🔥 Pro"},
+{q:"Live NVD totals in this repo (Huawei vs Cisco)?",o:["0 / 0","1062 / 6985 — attack surface is universal","1 / 2"],a:1,e:"CVE counts are hygiene proxies, not backdoor proof — but they kill the 'only one vendor is buggy' story.",l:"🔥 Pro"},
+{q:"The thesis in one line?",o:["Backdoors are free","The secret door you open today gets stolen and everyone walks through it — price it before you build it","Audits are useless"],a:1,e:"Alleged cost proven: 0 docs. Realized cost of leaked stockpile: ~$16B. That asymmetry is the whole repo.",l:"🔥 Pro"}
+];
+var i=0,score=0,lock=false;
+var qt=document.getElementById('qtext'),op=document.getElementById('opts'),ex=document.getElementById('exp'),nx=document.getElementById('next'),sc=document.getElementById('score'),pb=document.getElementById('pbar'),pt=document.getElementById('ptext');
+function render(){lock=false;ex.textContent='';nx.style.display='none';var c=Q[i];pt.textContent='Question '+(i+1)+' / '+Q.length+' · Level: '+c.l;qt.textContent=c.q;op.innerHTML='';pb.style.width=(i/Q.length*100)+'%';
+c.o.forEach(function(t,k){var b=document.createElement('button');b.className='opt';b.textContent=t;b.onclick=function(){if(lock)return;lock=true;if(k===c.a){b.classList.add('ok');score++;ex.textContent='✅ Correct. '+c.e}else{b.classList.add('bad');ex.textContent='❌ Not quite. '+c.e;op.children[c.a].classList.add('ok');}sc.textContent='Score: '+score+' / '+(i+1);nx.style.display='inline-block';pb.style.width=((i+1)/Q.length*100)+'%';};op.appendChild(b);});}
+nx.onclick=function(){i++;if(i<Q.length){render();}else{qt.textContent='Done! Final score: '+score+' / '+Q.length;op.innerHTML='';ex.textContent=score>=9?'🏆 Pro level. You can brief this case in an interview.':score>=6?'💪 Strong. Re-read Beginner steps 7–8 and retake.':'🌱 Good start. Read the Beginner guide above, then retake — step by step.';nx.style.display='none';pt.textContent='Complete';}};
+render();
+// charts (no deps)
+function bars(id,pairs,log){var c=document.getElementById(id),x=c.getContext('2d');var W=c.width=c.offsetWidth*2,H=c.height=520;x.scale(1,1);x.fillStyle='#0a1326';x.fillRect(0,0,W,H);
+var max=Math.max.apply(null,pairs.map(function(p){return p[1];}));var n=pairs.length,bw=W/(n*1.6);
+pairs.forEach(function(p,k){var v=p[1];var h=log?(Math.log10(v+1)/Math.log10(max+1))*(H-140):(v/max)*(H-140);var bx=30+k*(bw*1.6),by=H-60-h;
+var g=x.createLinearGradient(0,by,0,by+h);g.addColorStop(0,'#5aa2ff');g.addColorStop(1,'#3ddc84');x.fillStyle=g;x.fillRect(bx,by,bw,h);
+x.fillStyle='#e8eefc';x.font='20px system-ui';x.fillText(p[0],bx, H-30);x.fillStyle='#9fb0d0';x.font='18px system-ui';x.fillText('$'+(v>=1e9?(v/1e9)+'B':(v/1e6)+'M'),bx,by-10);});}
+bars('c1',[['Maersk',300],['Merck',870],['FedEx-TNT',400],['Saint-Gobain',400],['Mondelez',188],['Reckitt',129]],false);
+(function(){var c=document.getElementById('c2'),x=c.getContext('2d');var W=c.width=c.offsetWidth*2,H=c.height=520;x.fillStyle='#0a1326';x.fillRect(0,0,W,H);
+x.fillStyle='#1f2f52';x.fillRect(40,60,W/2-80,300);x.fillStyle='#9fb0d0';x.font='22px system-ui';x.fillText('Alleged: 0 docs',60,90);
+var g=x.createLinearGradient(0,60,W/2,360);g.addColorStop(0,'#ff6b6b');g.addColorStop(1,'#ffb454');x.fillStyle=g;x.fillRect(W/2+40,60,W/2-80,300);
+x.fillStyle='#fff';x.font='bold 26px system-ui';x.fillText('Realized: ~$16B',W/2+60,90);x.fillStyle='#9fb0d0';x.font='20px system-ui';x.fillText('0 proven vs $16B realized — infinite blowback ratio',40,H-30);})();
+</script>
+</body>
+</html>

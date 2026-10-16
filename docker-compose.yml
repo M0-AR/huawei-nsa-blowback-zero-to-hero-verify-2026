@@ -1,0 +1,22 @@
+services:
+  research:
+    build: .
+    container_name: blowback-verify
+    volumes:
+      - ./benchmarks:/app/benchmarks
+      - ./data:/app/data
+    environment:
+      - PYTHONUNBUFFERED=1
+      - LIVE_FETCH=1
+    command: python -m src.run_all
+
+  notebooks:
+    image: python:3.11-slim
+    container_name: blowback-notes
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+      - "8888:8888"
+    command: bash -c "pip install -q -r requirements.txt && python -m http.server 8000"
+    profiles: ["extra"]

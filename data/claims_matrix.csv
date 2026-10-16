@@ -1,0 +1,13 @@
+claim_id,short_title,verdict,evidence_strength_0_5,live_check,primary_sources
+C1,NSA TAO intercepted Cisco shipments + beacon implants (June 2010 newsletter photo),CONFIRMED,5,live_fetch_optional,"Ars Technica 2014-05-14; Guardian/Greenwald 2014-05-12 No Place to Hide; Engadget 2014-05-16; TechRadar 2014-05-16"
+C2,Operation Shotgiant 2007/2009 infiltrated Huawei Shenzhen servers email archive source code,CONFIRMED,5,live_fetch_optional,"NYT 2014-03-22; Der Spiegel 2014-03-22; Reuters 2014-03-24; Guardian 2014-03-22; Wired 2014-03-27"
+C3,ANT catalog Dec 2013 HEADWATER/HALLUXWATER TURBOPANDA persistent bootROM backdoor on-shelf,CONFIRMED,5,live_fetch_optional,"EFF ANT PDF 2013-12-30; Schneier HEADWATER 2014-01-14 HALLUXWATER 2014-01-08; Spiegel 2013-12-29; Wikipedia ANT catalog"
+C4,NSA targeted Huawei-customer networks Iran Afghanistan Pakistan Kenya Cuba,CONFIRMED,4,live_fetch_optional,"Wired 2014-03-27; IEEE Spectrum 2014-03-26"
+C5,Snowden leaks published Mar 22 2014 NYT + Spiegel exposing dual narrative,CONFIRMED,5,live_fetch_optional,"NYT slides 2014-03-23; Reuters Shotgiant; ABC 2014-03-23"
+C6,Cisco CEO Chambers May 15 2014 letter to Obama loss of trust in US gear,CONFIRMED,5,sec_live_verified,"Ars 2014-05-19; PBS 2014-05-19; BBC 2014-05-19; FT 2014-05-18; Cisco orders emerging -7% Brazil -27% Russia -28%"
+C7,UK HCSEC The Cell Banbury 2010 no backdoor found but poor hygiene 2019 report,CONFIRMED,5,live_fetch_optional,"NCSC HCSEC Oversight 2019 PDF; Wired 2019-02-22 2019-03-28; Register 2019-02-14; WP 2019-02-20"
+C8,UK 5G Huawei ban July 14 2020 driven by US sanctions not new technical finding,CONFIRMED,4,live_fetch_optional,"Verge 2020-07-14; Reuters 2020-07-15"
+C9,Shadow Brokers Aug 2016 leak EternalBlue Apr 14 2017 WannaCry May 12 2017 200k/150 NotPetya $10B+ Maersk $200-300M,CONFIRMED,5,live_fetch_optional,"Reuters 2017-05-13; CNBC 2017-08-16; Wired 2017-07-01 2018-08-21; CSO 2022-06-27; NDTO 2018-02-01"
+C10,Huawei founded 1987 Ren Zhengfei ex-PLA third-of-population claim low-price+financing model,CONFIRMED,4,live_fetch_optional,"NYT Huawei boasts third; Reuters explainer $92B 2018 largest supplier; Wikipedia Ren/Huawei; DellOro 2019 share growth"
+C11,Routers see all traffic updates can re-infect clean device hygiene-vs-malice indistinguishability,CONFIRMED,4,live_fetch_optional,"HCSEC binary-equivalence failure 2019; ACM 2025-2026 reproducible-builds only 20% bit-identical; Lily/R-Diff/SynthChain 2026 benchmarks"
+C12,Blowback law secret backdoors get stolen and reused by all,CONFIRMED,5,sec_live_verified,"Microsoft Tomahawk-missiles quote; WannaCry $4-8B NotPetya $10B+ vs zero public Huawei-backdoor docs after years inside"

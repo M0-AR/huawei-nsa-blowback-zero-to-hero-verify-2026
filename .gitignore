@@ -1,0 +1,6 @@
+__pycache__/
+*.pyc
+.venv/
+benchmarks/*.json
+!benchmarks/.gitkeep
+data/snapshots/*_live.json

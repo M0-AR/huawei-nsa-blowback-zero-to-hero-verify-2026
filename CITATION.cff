@@ -1,0 +1,14 @@
+cff-version: 1.2.0
+title: From Allegation to Blowback
+version: 1.0.0
+date-released: 2026-10-16
+authors:
+  - family-names: blowback-verify
+license: MIT
+repository-code: file:///home/md/src/huawei-nsa-blowback-zero-to-hero-verify-2026
+keywords:
+  - supply-chain
+  - backdoor
+  - NSA
+  - Huawei
+  - reproducibility

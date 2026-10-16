@@ -1,0 +1,22 @@
+date,event,category,source
+2003-01-01,Cisco sues Huawei over copied router code settlement,background,Reuters explainer / IEEE Spectrum
+2005-01-01,Huawei boasts routers/switches connect third of world population,market-claim,NYT 2014-03-22 (quoting Huawei)
+2007-01-01,NSA Shotgiant targeting of Huawei begins (2007 per IEEE/Wired),interdiction,NYT/Spiegel/Wired/IEEE 2014
+2008-06-24,HEADWATER/HALLUXWATER catalog entries dated on-shelf ready,capability,EFF ANT PDF / Schneier
+2009-01-01,NSA inside Huawei Shenzhen reads Ren Zhengfei/Sun Yafang email + source code,interdiction,Spiegel/NYT 2014
+2010-06-01,TAO Access newsletter photos Cisco router load-station beacon implant,interdiction,Ars/Greenwald 2014
+2010-11-01,UK HCSEC The Cell Banbury opens Huawei pays ~12M GBP/yr reports to NSA adviser,oversight,NCSC/Wired
+2012-10-01,US House Intel report tells firms avoid Huawei/ZTE no public backdoor proof,accusation,Guardian 2014-03-22
+2013-12-30,ANT catalog published Der Spiegel 49 pages 2008-2009 prices free-$250k,disclosure,Spiegel/EFF/Wikipedia
+2014-03-22,NYT + Spiegel publish Shotgiant many-targets-exploit-Huawei quote,disclosure,NYT/Reuters/ABC/Wired
+2014-05-12,Greenwald No Place to Hide Cisco intercept photos,disclosure,Guardian/CBC/TechCrunch
+2014-05-15,Cisco Chambers letter to Obama rules-of-road trust warning,blowback,Ars/PBS/BBC/FT
+2014-08-13,Cisco China blame NSA disclosures orders emerging -7% Brazil -27% Russia -28%,market,CNBC/InfoWorld/Vox
+2016-08-01,Shadow Brokers surface claim NSA Equation Group tools for sale,leak,Wired 2017-07-01
+2017-04-14,Shadow Brokers publish EternalBlue free,leak,Reuters/Wired/CSO
+2017-05-12,WannaCry worm 200000+ hosts 150 countries NHS crippled kill-switch,blowback,Reuters/NDTO/Wired
+2017-06-27,NotPetya via EternalBlue+Mimikatz $10B+ Maersk $200-300M Merck $870M FedEx-TNT $400M,blowback,Wired 2018-08-21/CNBC
+2019-03-28,HCSEC 2019 report poor hygiene no backdoor $2B Huawei remediation pledge,oversight,Wired/NCSC/Register
+2019-05-16,US Entity List + chip rule Huawei $10B US semis $6B/yr US suppliers at risk,market,MarketWatch/Investopedia/AlJazeera
+2020-07-14,UK bans Huawei 5G removal by 2027 cost 2B GBP cites US sanctions reliability,market,Verge/Reuters
+2026-01-01,ACM/SynthChain/Lily benchmarks only 20pct reproducible builds single-source 0.39 coverage fusion 0.64,method,ACM 2025-2026 arXiv 2603.16694 2607.26719
